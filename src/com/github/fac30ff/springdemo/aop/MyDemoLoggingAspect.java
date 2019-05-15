@@ -3,6 +3,7 @@ package com.github.fac30ff.springdemo.aop;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
 import org.aspectj.lang.annotation.Pointcut;
+import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
 
 @Aspect
@@ -15,11 +16,13 @@ public class MyDemoLoggingAspect {
 	}
 	
 	@Before("execution(public void com.github.fac30ff.springdemo.dao.AccountDAO.addAccount())")
+	@Order(0)
 	public void beforeAddAccountAdviceOnlyForAccount() {
 		System.out.println("\n ====> specific for 1 class");
 	}
 	
 	@Before("execution(* add*(com.github.fac30ff.springdemo.Account, ..))")
+	@Order(1)
 	public void beforeAddMethodsWithAnyParameters() {
 		System.out.println("\n ====> any add methods with any parameters");
 	}
