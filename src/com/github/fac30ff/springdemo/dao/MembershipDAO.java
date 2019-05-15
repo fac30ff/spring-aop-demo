@@ -12,4 +12,8 @@ public class MembershipDAO {
 	public void addSillyMember() {
 		System.out.println(getClass() + ": another add method");
 	}
+	
+	public void goToSleep() {
+		System.out.println(getClass() + ": I am going sleep now...");
+	}
 }

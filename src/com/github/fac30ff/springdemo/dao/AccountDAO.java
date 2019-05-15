@@ -13,4 +13,9 @@ public class AccountDAO {
 	public void addAccount(Account account) {
 		System.out.println(getClass() + ": method with parameter " + account.toString());
 	}
+	
+	public boolean doWork() {
+		System.out.println(getClass() + ": doWork()");
+		return true;
+	}
 }
