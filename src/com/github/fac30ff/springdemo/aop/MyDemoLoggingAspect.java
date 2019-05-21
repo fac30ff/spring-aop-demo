@@ -16,7 +16,7 @@ public class MyDemoLoggingAspect {
 	}
 	
 	@Before("execution(public void com.github.fac30ff.springdemo.dao.AccountDAO.addAccount())")
-	@Order(0)
+	@Order(Integer.MIN_VALUE)
 	public void beforeAddAccountAdviceOnlyForAccount() {
 		System.out.println("\n ====> specific for 1 class");
 	}
