@@ -47,12 +47,12 @@ public class MyDemoLoggingAspect {
 		System.out.println("pointcuts combining");
 	}
 	
-	@Pointcut("execution(com.github.fac30ff.springdemo.Account.get*())")
+	@Pointcut("execution(* com.github.fac30ff.springdemo.Account.get*())")
 	public void allGettersInAccount() {
 		
 	}
 	
-	@Pointcut("execution(com.github.fac30ff.springdemo.Account.set*(..))")
+	@Pointcut("execution(* com.github.fac30ff.springdemo.Account.set*(..))")
 	public void allSettersInAccount() {
 		
 	}	
